@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import ResponsiveNavBar from './layout/NavBar';
+import DataTableFilter from './components/Tables/DataTableFilter';
+// import DataTable from './components/Tables/DataTable';
+// import SearchTable from './components/Tables/SearchTable';
+import { Box, Container } from '@mui/material';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box component="div">
+      <ResponsiveNavBar />
+      <Container sx={{my: 2}} >
+        <DataTableFilter />
+      </Container>
+    </Box>
   );
 }
 
